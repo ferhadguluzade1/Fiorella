@@ -1,11 +1,15 @@
-﻿namespace Fiorella.Models
+﻿using Fiorella.Models.Base;
+
+namespace Fiorella.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public int Id { get; set; }
+       
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-
+        public List<Image> Images { get; set; }
+        public List<Category> Categories { get; set; }
+        public List<Tag> Tags { get; set; }
     }
 }
