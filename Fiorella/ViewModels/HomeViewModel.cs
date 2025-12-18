@@ -6,6 +6,11 @@ namespace Fiorella.ViewModels
     {
         public List<Product> Products { get; set; }
         public List<Slider> Sliders { get; set; }
-    
+
+        public HomeViewModel()
+        {
+            Products = new List<Product>();
+            Sliders = new List<Slider>();
+        }
     }
 }

@@ -8,6 +8,14 @@ namespace Fiorella.Models
         public int ProductId { get; set; }
         public Product Product { get; set; }
         public bool IsPrimary { get; set; } = false;
-        
+
+        public Image(string url, int productId, Product product)
+        {
+            Url = url;
+            ProductId = productId;
+            Product = product;
+            
+        }
+
     }
 }

@@ -11,18 +11,20 @@ namespace Fiorella
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AppDbContext>(options =>
-            
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-            );
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
             var app = builder.Build();
-
-            app.MapGet("/", () => "Hello World!");
-            
             app.UseStaticFiles();
+
+            app.MapControllerRoute(
+                        name: "areas",
+                        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                    );
             
             app.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}"
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}"
             );
 
             app.Run();

@@ -8,10 +8,6 @@ namespace Fiorella.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-           
-
-        }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){}
     }
 }

@@ -12,7 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Detail\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\admin\css\" />
+    <Folder Include="wwwroot\admin\img\" />
+    <Folder Include="wwwroot\admin\js\" />
+    <Folder Include="wwwroot\admin\vendor\" />
+    <Folder Include="wwwroot\admin\scss\" />
   </ItemGroup>
 
 </Project>
