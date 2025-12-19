@@ -12,5 +12,9 @@ namespace Fiorella.Models
             Products = products;
             
         }
+        public Category()
+        {
+            
+        }
     }
 }

@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\admin\**" />
+    <Content Remove="wwwroot\admin\**" />
+    <EmbeddedResource Remove="wwwroot\admin\**" />
+    <None Remove="wwwroot\admin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.22">
@@ -17,11 +24,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="wwwroot\admin\css\" />
-    <Folder Include="wwwroot\admin\img\" />
-    <Folder Include="wwwroot\admin\js\" />
-    <Folder Include="wwwroot\admin\vendor\" />
-    <Folder Include="wwwroot\admin\scss\" />
   </ItemGroup>
 
 </Project>
